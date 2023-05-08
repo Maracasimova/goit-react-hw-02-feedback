@@ -1,10 +1,10 @@
 import React from 'react';
-import { Feedback } from './Feedback/Feedback';
+import { FeedbackOptions } from './Feedback/FeedbackOptions';
 
 export const App = () => {
   return (
     <div>
-      <Feedback />
+      <FeedbackOptions />
     </div>
   );
 };

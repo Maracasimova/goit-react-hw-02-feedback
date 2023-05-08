@@ -15,14 +15,11 @@ export const Feedback = () => {
   };
 
   const countTotalFeedback = () => {
-    const { good, neutral, bad } = state;
-    return good + neutral + bad;
+    return Object.values(this.state).reduce((acc, val) => acc + val, 0);
   };
 
   const countPositiveFeedbackPercentage = () => {
-    const { good } = state;
-    const total = countTotalFeedback();
-    return total > 0 ? Math.round((good / total) * 100) : 0;
+    return parseInt((this.state.good / this.countTotalFeedback()) * 100);
   };
 
   return (
@@ -46,4 +43,3 @@ export const Feedback = () => {
     </div>
   );
 };
-
