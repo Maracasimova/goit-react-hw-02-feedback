@@ -2,6 +2,7 @@ import { Component } from 'react';
 import { FeedbackOptions } from './Feedback/FeedbackOptions';
 import { Section } from './Section/Section';
 import { Statistics } from './Statistics/Statistics';
+import { Notification } from './Notification/Notification';
 
 class App extends Component {
   state = {
@@ -10,9 +11,9 @@ class App extends Component {
     bad: 0,
   };
 
-  handleButtonClick = type => {
+  handleButtonClick = state => {
     this.setState(prevState => ({
-      [type]: prevState[type] + 1,
+      [state]: prevState[state] + 1,
     }));
   };
 
@@ -35,7 +36,7 @@ class App extends Component {
             onLeaveFeedback={this.handleButtonClick}
           />
           {this.countTotalFeedback() === 0 ? (
-            <p>There is no feedback</p>
+            <Notification message={'There is no feedback'} />
           ) : (
             <Statistics
               title={'Statistics'}
