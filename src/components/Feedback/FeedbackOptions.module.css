@@ -1,3 +1,13 @@
-.feedback{
-    
+.feedback {
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  color: #5c5b43;
+  background-color: #d6d2c7;
+  border-radius: 10px;
+  height: 30px;
+  width: 100px;
+  font-size: 20px;
 }

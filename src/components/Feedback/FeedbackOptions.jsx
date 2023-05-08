@@ -4,7 +4,7 @@ import style from './FeedbackOptions.module.css';
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   const stateArray = Object.keys(options);
   return (
-    <div className={style.container}>
+    <div className={style.feedback}>
       {stateArray.map(option => (
         <button
           className={style.btn}

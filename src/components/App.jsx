@@ -35,6 +35,7 @@ class App extends Component {
             options={this.state}
             onLeaveFeedback={this.handleButtonClick}
           />
+          <Section title="Statistics"></Section>
           {this.countTotalFeedback() === 0 ? (
             <Notification message={'There is no feedback'} />
           ) : (
