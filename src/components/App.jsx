@@ -27,12 +27,13 @@ class App extends Component {
 
   render() {
     const { good, neutral, bad } = this.state;
+    const options = { good, neutral, bad };
 
     return (
       <>
         <Section title={'Please leave feedback'} children>
           <FeedbackOptions
-            options={this.state}
+            options={options}
             onLeaveFeedback={this.handleButtonClick}
           />
           <Section title="Statistics"></Section>

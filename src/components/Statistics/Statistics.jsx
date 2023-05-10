@@ -20,6 +20,9 @@ export const Statistics = ({
 };
 
 Statistics.propTypes = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
   positivePercentage: PropTypes.func.isRequired,
   total: PropTypes.func.isRequired,
 };
